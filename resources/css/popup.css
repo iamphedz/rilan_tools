@@ -1,0 +1,41 @@
+.popup-container {
+	@apply fixed flex inset-0 w-full h-full z-50 justify-center items-center;
+}
+
+.popup-container .wrapper {
+	@apply flex flex-col mx-2 rounded shadow overflow-hidden z-30 bg-white;
+}
+
+.popup-container .wrapper .header {
+	@apply bg-gray-200 p-2 font-semibold flex justify-between text-xs;
+}
+
+.popup-container .wrapper .content {
+	@apply flex items-center justify-center p-3 text-sm text-center h-full text-xs;
+}
+
+.popup-container .wrapper .buttons {
+	@apply flex justify-center w-full justify-center items-center text-xs;
+}
+
+.popup-container .wrapper .buttons button {
+	@apply rounded shadow border m-2 p-2 w-32;
+}
+
+.wrapper .buttons.default button,
+.wrapper .header.default {
+	@apply bg-gray-200 text-black;
+}
+
+.wrapper .buttons.confirm button,
+.wrapper .header.confirm {
+	@apply bg-blue-200 text-black;
+}
+
+.wrapper .buttons.danger button,
+.wrapper .header.danger {
+	@apply bg-red-200 text-black;
+}
+.popup-container .bg-fader {
+	@apply absolute inset-0 w-full h-full bg-black opacity-25 z-0;
+}

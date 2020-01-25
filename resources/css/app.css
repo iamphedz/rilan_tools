@@ -1,0 +1,387 @@
+/**
+ * This injects Tailwind's base styles, which is a combination of
+ * Normalize.css and some additional base styles.
+ *
+ * You can see the styles here:
+ * https://github.com/tailwindcss/tailwindcss/blob/master/css/base.css
+ *
+ * If using `postcss-import`, use this import instead:
+ *
+ * @import "tailwindcss/base";
+ */
+@tailwind base;
+
+/**
+ * This injects any component classes registered by plugins.
+ *
+ * If using `postcss-import`, use this import instead:
+ *
+ * @import "tailwindcss/components";
+ */
+@tailwind components;
+
+body {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    @apply bg-gray-300;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    @apply bg-yellow-400;
+}
+
+.sub-container {
+    @apply flex justify-center mt-3 mb-10 text-xs;
+}
+
+button {
+    @apply select-none;
+}
+
+.link {
+    @apply font-semibold text-teal-700;
+}
+
+.admin-top-nav a.active {
+    @apply border-r-2 border-green-500 bg-gray-800 text-gray-200;
+}
+
+.category-nav span {
+    transition: all 0.3s ease;
+}
+
+.category-nav span.active {
+    @apply bg-green-900 text-yellow-400;
+}
+
+.pagination .disabled {
+    @apply bg-gray-400 cursor-default;
+}
+
+.modal {
+    transition: opacity 0.25s ease;
+}
+
+.img-thumbnail {
+    @apply cursor-pointer;
+}
+
+.gallery img.active {
+    @apply border-green-400;
+}
+
+.notification .unread {
+    @apply bg-yellow-200;
+}
+
+.item-count {
+    @apply px-2 py-1 font-semibold bg-red-800 text-white text-xs rounded;
+}
+
+.disabled-button {
+    @apply bg-gray-300 text-gray-600 cursor-not-allowed;
+}
+
+.admin-order-filter .active {
+    @apply bg-teal-900;
+}
+
+.admin-order-filter .expired-cancel.active {
+    @apply bg-red-900;
+}
+
+button:focus {
+    @apply outline-none;
+}
+
+/** Vuejs component transition effects **/
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity 0.3s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+    opacity: 0;
+}
+
+/* Enter and leave animations can use different */
+/* durations and timing functions.              */
+.ap-menu-enter-active {
+    transition: all 0.2s ease-out;
+}
+.ap-menu-leave-active {
+    transition: all 0.2s ease-in;
+}
+.ap-menu-enter, .ap-menu-leave-to
+/* .slide-fade-leave-active below version 2.1.8 */ {
+    transform: translateX(-30px);
+    opacity: 0;
+}
+
+/* Enter and leave animations can use different */
+/* durations and timing functions.              */
+.ap-add-product-enter-active {
+    transition: all 0.1s ease-out;
+}
+.ap-add-product-leave-active {
+    transition: all 0.1s ease-in;
+}
+.ap-add-product-enter, .ap-add-product-leave-to
+/* .slide-fade-leave-active below version 2.1.8 */ {
+    transform: translateX(30px);
+    opacity: 0;
+}
+
+/* Enter and leave animations can use different */
+/* durations and timing functions.              */
+.ap-table-list-enter-active {
+    transition: all 0.3s ease-out;
+}
+.ap-table-list-leave-active {
+    transition: all 0.2s ease-in;
+}
+.ap-table-list-enter, .ap-table-list-leave-to
+/* .slide-fade-leave-active below version 2.1.8 */ {
+    transform: translateX(-30px);
+    opacity: 0;
+}
+
+/* Enter and leave animations can use different */
+/* durations and timing functions.              */
+.fade-up-enter-active {
+    transition: all 0.3s ease-out;
+}
+.fade-up-leave-active {
+    transition: all 0.2s ease-in;
+}
+.fade-up-enter, .fade-up-leave-to
+/* .slide-fade-leave-active below version 2.1.8 */ {
+    transform: translateY(20px);
+    opacity: 0;
+}
+
+/* Enter and leave animations can use different */
+/* durations and timing functions.              */
+.fade-down-enter-active {
+    transition: all 0.3s ease-out;
+}
+.fade-down-leave-active {
+    transition: all 0.2s ease-in;
+}
+.fade-down-enter, .fade-down-leave-to
+/* .slide-fade-leave-active below version 2.1.8 */ {
+    transform: translateY(-20px);
+    opacity: 0;
+}
+
+/* Enter and leave animations can use different */
+/* durations and timing functions.              */
+.fade-down-slow-enter-active {
+    transition: all 0.3s ease-out;
+}
+.fade-down-slow-leave-active {
+    transition: all 0.3s ease-in;
+}
+.fade-down-slow-enter, .fade-down-slow-leave-to
+/* .slide-fade-leave-active below version 2.1.8 */ {
+    transform: translateY(-20px);
+    opacity: 0;
+}
+
+/* Enter and leave animations can use different */
+/* durations and timing functions.              */
+.fade-in-enter-active {
+    transition: all 0.2s ease-out;
+}
+.fade-in-leave-active {
+    transition: all 0.2s ease-in;
+}
+.fade-in-enter, .fade-in-leave-to
+/* .slide-fade-leave-active below version 2.1.8 */ {
+    opacity: 0;
+}
+
+/* Enter and leave animations can use different */
+/* durations and timing functions.              */
+.fade-left-enter-active {
+    transition: all 0.3s ease-out;
+}
+.fade-left-leave-active {
+    transition: all 0.2s ease-in;
+}
+.fade-left-enter, .fade-left-leave-to
+/* .slide-fade-leave-active below version 2.1.8 */ {
+    transform: translateX(20px);
+    opacity: 0;
+}
+
+/* Enter and leave animations can use different */
+/* durations and timing functions.              */
+.fade-right-enter-active {
+    transition: all 0.3s ease-out;
+}
+.fade-right-leave-active {
+    transition: all 0.2s ease-in;
+}
+.fade-right-enter, .fade-right-leave-to
+/* .slide-fade-leave-active below version 2.1.8 */ {
+    transform: translateX(-20px);
+    opacity: 0;
+}
+
+.update-status button.active {
+    @apply text-black font-semibold;
+}
+
+.slide-enter-active {
+    -moz-transition-duration: 0.3s;
+    -webkit-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -moz-transition-timing-function: ease-in;
+    -webkit-transition-timing-function: ease-in;
+    -o-transition-timing-function: ease-in;
+    transition-timing-function: ease-in;
+}
+
+.slide-leave-active {
+    -moz-transition-duration: 0.3s;
+    -webkit-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -moz-transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+    -webkit-transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+    -o-transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+    transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+}
+
+.slide-enter-to,
+.slide-leave {
+    max-height: 200px;
+    overflow: hidden;
+}
+
+.slide-enter,
+.slide-leave-to {
+    overflow: hidden;
+    opacity: 0;
+    max-height: 0;
+}
+
+.fa-spinner {
+    -webkit-animation: spinner 2s infinite linear; /* Safari 4.0 - 8.0 */
+    /* -webkit-animation-iteration-count: infinite; Safari 4.0 - 8.0 */
+    animation: spinner 2s infinite linear;
+}
+
+@-webkit-keyframes spinner {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(359deg);
+    }
+}
+
+@keyframes spinner {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(359deg);
+    }
+}
+
+.product-settings {
+    transition: width 0.3s;
+    @apply w-10;
+}
+
+.product-settings.active {
+    @apply w-full;
+}
+
+.order-status {
+    transition: background-color 0.2s ease-out;
+}
+
+.add-cart {
+    transition: background-color 0.3s ease-out;
+}
+
+.ss-box-shadow {
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.product-container,
+.order-container {
+    transition: all 0.2s ease-out;
+}
+
+.product-container.selected,
+.order-container.selected {
+    transform: scale(1.05, 1.05);
+}
+
+.refresh-icon {
+    transition: all 0.2s ease-out;
+}
+
+/**
+ * Here you would add any of your custom component classes; stuff that you'd
+ * want loaded *before* the utilities so that the utilities could still
+ * override them.
+ *
+ * Example:
+ *
+ * .btn { ... }
+ * .form-input { ... }
+ *
+ * Or if using a preprocessor or `postcss-import`:
+ *
+ * @import "components/buttons";
+ * @import "components/forms";
+ */
+
+/**
+ * This injects all of Tailwind's utility classes, generated based on your
+ * config file.
+ *
+ * If using `postcss-import`, use this import instead:
+ *
+ * @import "tailwindcss/utilities";
+ */
+@tailwind utilities;
+
+/**
+ * Here you would add any custom utilities you need that don't come out of the
+ * box with Tailwind.
+ *
+ * Example :
+ *
+ * .bg-pattern-graph-paper { ... }
+ * .skew-45 { ... }
+ *
+ * Or if using a preprocessor or `postcss-import`:
+ *
+ * @import "utilities/background-patterns";
+ * @import "utilities/skew-transforms";
+ */
+
+/*@import "~font-awesome/css/font-awesome.css";*/
+@import "~@fortawesome/fontawesome-free/css/all.css";
+
+@import "nprogress.css";
+@import "popup.css";
+
+
