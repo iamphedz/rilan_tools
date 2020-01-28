@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a76107797f2acc71acb6b38bdc657226",
+    "content-hash": "6f82881892e772aafdac550fe099935b",
     "packages": [
         {
             "name": "barryvdh/laravel-debugbar",
@@ -207,6 +207,48 @@
                 "laravel-websockets"
             ],
             "time": "2019-09-04T06:48:06+00:00"
+        },
+        {
+            "name": "calebporzio/sushi",
+            "version": "v1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/calebporzio/sushi.git",
+                "reference": "ba984a44f0dd1149fde72b6a7cf7d74251593b75"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/calebporzio/sushi/zipball/ba984a44f0dd1149fde72b6a7cf7d74251593b75",
+                "reference": "ba984a44f0dd1149fde72b6a7cf7d74251593b75",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/database": "~5.8.0|^6.0.0",
+                "illuminate/filesystem": "~5.8.0|^6.0.0",
+                "illuminate/support": "~5.8.0|^6.0.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^4.5",
+                "phpunit/phpunit": "^8.5"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Sushi\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Caleb Porzio",
+                    "email": "calebporzio@gmail.com"
+                }
+            ],
+            "description": "Eloquent's missing \"array\" driver.",
+            "time": "2020-01-28T14:02:44+00:00"
         },
         {
             "name": "cboden/ratchet",
