@@ -28,7 +28,7 @@
         "font-awesome": "^4.7.0",
         "jquery": "^3.4.1",
         "laravel-echo": "^1.6.1",
-        "moment": "^2.24.0",
+        "moment": "^2.29.4",
         "portal-vue": "^2.1.7",
         "pusher-js": "^5.0.3",
         "v-money": "^0.8.1",
